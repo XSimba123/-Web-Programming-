@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width" name="viewport"/>
+    <script src="js/jquery.js"></script>
+    <title>My TodoMVC ——By 1751714 许靖宁</title>
+    <link rel="stylesheet" href="css/TodoMVC.css">
+</head>
+<body>
+<div class="my-todo">
+    <h1>Do or Die</h1>
+    <header>
+        <input class="finish-all" type="checkbox">
+        <input class="add" type="text" placeholder="What needs to be done?" autofocus>
+        <select class="importance">
+            <option value="All" selected = "selected" >All</option>
+            <option value="绿">普通</option>
+            <option value="黄">重要</option>
+            <option value="红">紧急</option>
+        </select>
+        <button class="sort">sort</button>
+    </header>
+
+
+    <div class="main">
+        <input class="edit" type="text" placeholder="What needs to be done?">
+        <!-- Show List -->
+        <ul class="todo-list">
+            <li>
+                <div class="move-item">
+                  <input class="item-completed" type="checkbox">
+                  <label class="item-label">"新消息"</label>
+                  <select class="todo-importance">
+                      <option value="绿">绿</option>
+                      <option value="黄">黄</option>
+                      <option value="红">红</option>
+                  </select>
+                </div>
+
+            </li>
+        </ul>
+
+        <div class="footer">
+            <span class="todo-count"></span>
+            <ul class="filters">
+                <li><a class="selected" style="cursor:pointer;">All</a></li>
+                <li><a class="" style="cursor:pointer;">Active</a></li>
+                <li><a class="" style="cursor:pointer;">Completed</a></li>
+            </ul>
+            <button class="clear-completed">Clear completed</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/model.js"></script>
+<script src="js/localStorage.js"></script>
+<script src="js/TodoMVC.js"></script>
+
+
+
+
+</body>
+</html>
+
