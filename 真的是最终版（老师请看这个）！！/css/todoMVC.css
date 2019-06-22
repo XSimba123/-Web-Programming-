@@ -54,13 +54,15 @@ header{
     text-align: center;
     vertical-align: center;
     margin: 10px;
-    height: 40px;
-    padding-top: 10px;
+    height: 60px;
+    padding-top: 30px;
     background: #ffffdc;
     display: -moz-box;
     border: 1px solid yellow;
 }
 header input{
+    margin-top: -20px;
+    height:40px;
 }
 .main{
 
