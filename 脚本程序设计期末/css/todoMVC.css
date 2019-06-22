@@ -1,0 +1,155 @@
+body{
+    background: #fffff5
+}
+.todo-item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #999;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+}
+.em{
+    font-size: 1.5em;
+    float: left;
+    color: blue;
+    margin-left: 10px;
+}
+
+.add-item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #999;
+    height: 40px;
+    width: 100%;
+    vertical-align: auto;
+    background: #f0f0ff;
+    line-height:40px;
+    border: 1px dashed blue;
+}
+
+.add-item .item-label{
+    margin-left: 5px;
+    color: #3264ff;
+}
+
+
+h1 {
+    top: -155px;
+    width: 100%;
+    font-size: 55px;
+    font-weight: 900;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f34c5f;
+    text-rendering: optimizeLegibility;
+}
+
+header{
+    text-align: center;
+    vertical-align: center;
+    margin: 10px;
+    height: 40px;
+    padding-top: 10px;
+    background: #ffffdc;
+    display: -moz-box;
+    border: 1px solid yellow;
+}
+header input{
+}
+.main{
+
+    padding: 5px;
+    margin: 10px;
+    background: #ffffdc;
+    border: 1px solid yellow;
+}
+.selected{
+    color: red;
+}
+
+.complete{
+    color: red;
+    text-decoration: line-through;
+}
+
+.green{
+    background: #dcfff5;
+    border: 1px solid green;
+}
+.yellow{
+    border: 1px solid orange;
+    background: #fff0dc;
+}
+.red{
+    background: #ffdcdc;
+    border: 1px solid red;
+}
+
+
+.move-item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dashed #999;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    position: absolute;
+    z-index: 99;
+    visibility: hidden;
+}
+.todo-list{
+    padding-inline-start: 0px;
+    margin-right: 0;
+}
+.todo-list li{
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: None;
+    width: 100%;
+}
+
+.filters{
+    padding-inline-start: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: 0;
+    width: 260px;
+}
+.filters li{
+    list-style: None;
+    width: 100px;
+    display: inline;
+}
+.filters li a{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 2px;
+    border: 1px solid #999;
+}
+
+.item-completed{
+    visibility: hidden;
+}
+
+.todo-importance{
+    margin-right: 10px;
+    margin-top: 10px;
+    float: right;
+}
+
+.edit{
+    position: absolute;
+    height: 38px;
+    width: 100%;
+    z-index: 100;
+    visibility: hidden;
+}
