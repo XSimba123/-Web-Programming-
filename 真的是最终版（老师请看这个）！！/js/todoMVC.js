@@ -73,7 +73,6 @@ var updateData = function () {
 
 var isWriting = 0;
 var finished = false;
-
 var refresh = function(){
     model.flush();
     var data = model.data;
@@ -92,12 +91,13 @@ var refresh = function(){
         '  </div>',
         '</li>'
     ].join('');
-
+    var active = 0;
     var move = $$('.move-item');
     move.style.visibility = 'hidden';
     for(var i = 0; i < data.items.length; i++){
-        var todoItem = document.createElement('li');
 
+        var todoItem = document.createElement('li');
+        if(!data.items[i].completed){active++;}
         var completeCheck = function (nowItem) {
             if(nowItem.completed)return ' checked="checked"';
             else return '';
@@ -306,6 +306,8 @@ var refresh = function(){
         }
 
     }
+    console.log(" items left.");
+    $$(".left").innerHTML = active + " items left.";
 
 };
 
@@ -324,7 +326,7 @@ window.onload = function () {
         });
 
 
-        refresh();
+
         var addText = $$('.add');
         var importance = $$('.importance');
         var finishAll = $$('.finish-all');
@@ -334,8 +336,14 @@ window.onload = function () {
         var edit = $$('.edit');
         var list = $$('.todo-list');
         var sort = $$('.sort');
+        var left = document.createElement('div');
+        left.setAttribute("id","left");
+        left.innerHTML="0 items left.";
+        left.className = "left";
+        $(".clear-completed").after(left);
         move.style.visibility = 'hidden';
         console.log(data.filter);
+        refresh();
         addText.addEventListener('change', function () {
             data.msg = addText.value;
             model.flush();
